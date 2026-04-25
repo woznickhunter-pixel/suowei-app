@@ -17,10 +17,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: '8.10'
-      - name: Generate app icons
-        run: |
-          pip install Pillow -q
-          python3 gen_icons.py
       - name: Build Debug APK
         run: gradle assembleDebug
       - name: Upload APK
